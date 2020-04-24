@@ -1,0 +1,50 @@
+.icon_book {
+  background: url("../icons/page-facing-up_1f4c4.svg");
+  @include icon();
+}
+
+.icon_page {
+  background: url("../icons/page-facing-up_1f4c4\ \(1\).svg");
+  @include icon();
+}
+
+.icon_crown {
+  background: url("../icons/crown_1f451.svg");
+  @include icon();
+}
+
+.icon_journal {
+  background: url("../icons/crown_1f451\ \(2\).svg");
+  @include icon();
+}
+
+.icon_age {
+  background: url("../icons/12+.svg");
+  @include icon($icon_age);
+}
+
+.icon_vk {
+  background: url("../icons/vk.svg");
+  @include icon($icons_social);
+}
+
+.icon_ok {
+  background: url("../icons/OK.svg");
+  @include icon($icons_social);
+}
+
+.icon_fb {
+  background: url("../icons/FB.svg");
+  @include icon($icons_social);
+}
+
+.icon_twitter {
+  background: url("../icons/Twi.svg");
+  @include icon($icons_social);
+}
+
+.icon_logo {
+  &:before {
+    content: url("../icons/logo.svg");
+  }
+}

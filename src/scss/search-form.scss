@@ -1,0 +1,41 @@
+.search-form {
+  $size_big: 48px;
+  $size_small: 30px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: $size_big;
+
+  &__input {
+    height: 100%;
+    flex-grow: 2;
+    border-radius: 24px;
+    font-size: 25px;
+    background-color: $bg-secondary;
+    color: $text-dark;
+    text-align: center;
+    border: none;
+  }
+
+  &__button {
+    margin-left: 15px;
+    width: $size_big;
+    height: 100%;
+    border-radius: 50%;
+    border: none;
+    background-color: $bg-secondary;
+  }
+
+  @include screen_s() {
+    height: $size_small;
+
+    &__button {
+      height: $size_small;
+      width: $size_small;
+    }
+    &__input {
+      font-size: 16px;
+    }
+  }
+}

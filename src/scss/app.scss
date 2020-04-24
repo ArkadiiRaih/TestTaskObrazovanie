@@ -1,0 +1,121 @@
+@import "_variables";
+@import "_mixins";
+@import "search-form";
+@import "sort-form";
+@import "cards";
+@import "icons";
+@import "footer";
+
+:root {
+  font-size: 14px;
+}
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  &.text_secondary {
+    color: $text-secondary;
+  }
+}
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 100px;
+
+  .btn {
+    margin-top: 15px;
+    @include screen_s() {
+      margin-top: 10px;
+    }
+  }
+}
+
+.btn {
+  border-radius: 52px;
+  background-color: transparent;
+  color: $text-white;
+  font-size: 16px;
+  font-style: bold;
+  text-transform: uppercase;
+  padding: 15px 25px;
+
+  &.btn_light {
+    border: 1px solid $bg-white;
+  }
+}
+
+body {
+  font-family: "Proxima Nova";
+}
+
+.app {
+  background-color: $bg-main;
+}
+
+.header {
+  border-bottom: 1px solid $bg-secondary;
+}
+
+.dropdown {
+  position: relative;
+
+  select {
+    display: none;
+  }
+}
+
+.container {
+  overflow: hidden;
+  margin: auto;
+  @include screen_xl() {
+    // max-width: 1276px;
+    padding: 50px 83px;
+  }
+
+  @include screen_l {
+    // max-width: 950px;
+    padding: 50px 36px;
+  }
+
+  @include screen_m {
+    // max-width: 950px;
+    padding: 50px 36px;
+  }
+
+  @include screen_s {
+    // max-width: 335px;
+    padding: 20px;
+  }
+}
+
+.list {
+  .list__item_iconed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & > i {
+      margin-right: 7px;
+    }
+  }
+}
+
+.social {
+  &__header {
+    font-size: 16px;
+    font-weight: bold;
+    color: $text-white;
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

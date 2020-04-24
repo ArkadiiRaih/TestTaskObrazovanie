@@ -1,0 +1,76 @@
+.sort-form {
+  $height_big: 70px;
+  $height-small: 50px;
+
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-white;
+  padding: 18px 32px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  height: $height_big;
+  margin: 70px 36px 10px;
+
+  &__collapse-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    display: none;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  &__item {
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+
+  &__item_collapse {
+    transition: all 0.5s linear;
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  @include screen_xl() {
+    margin: 50px 83px;
+  }
+
+  @include screen_s {
+    justify-content: center;
+    align-items: flex-start;
+    // height: $height-small;
+    padding: 15px;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+    max-height: none;
+    height: unset;
+
+    &.sort-form_collapse .sort-form__item_collapse {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .sort-form__item_collapse {
+      max-height: 200px;
+    }
+
+    &__collapse-button {
+      display: block;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

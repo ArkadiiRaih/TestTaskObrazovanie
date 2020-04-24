@@ -1,0 +1,31 @@
+@mixin screen_xl() {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin screen_l() {
+  @media screen and (max-width: 1439px) and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin screen_m() {
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen_s() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin icon($size: 23px) {
+  width: $size;
+  height: $size;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
