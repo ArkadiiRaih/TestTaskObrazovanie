@@ -8,10 +8,16 @@ function Card({ data }) {
       style={{ backgroundImage: `url(${img})` }}
     >
       {/* <img className="card__image" src={img} alt={title} /> */}
-      <ul className="card__tags">
+      <ul className="card__tags text text_10 text_sans text_bold">
         {tags && tags.map((tag) => <li className="card__tag">{tag}</li>)}
       </ul>
-      <p>{title}</p>
+      <p
+        className={`card__title text text_serif text_bold text_white ${
+          isMain ? "text_30" : "text_20"
+        }`}
+      >
+        {title}
+      </p>
     </div>
   );
 }

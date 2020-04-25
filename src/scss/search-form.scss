@@ -16,15 +16,39 @@
     color: $text-dark;
     text-align: center;
     border: none;
+    &:focus {
+      // border: 2px solid $link_hover;
+      box-shadow: 0px 0px 0px 4px $link_hover;
+    }
+  }
+
+  .search-form__input[data-filled="false"] + .search-form__button {
+    transform: scale(0);
+    max-width: 0;
   }
 
   &__button {
+    max-width: 100px;
     margin-left: 15px;
     width: $size_big;
     height: 100%;
     border-radius: 50%;
     border: none;
     background-color: $bg-secondary;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+      background-color: $link_hover;
+      .icon {
+        background-image: url("../icons/close\ icon_hover.svg");
+      }
+    }
+    &:focus {
+      background-color: $link_hover;
+      .icon {
+        background-image: url("../icons/close\ icon_hover.svg");
+      }
+    }
   }
 
   @include screen_s() {

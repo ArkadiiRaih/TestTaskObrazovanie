@@ -5,27 +5,27 @@
 }
 
 @mixin screen_l() {
-  @media screen and (max-width: 1439px) and (min-width: 769px) {
+  @media screen and (max-width: 1439px) and (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin screen_m() {
-  @media screen and (max-width: 1024px) and (min-width: 768px) {
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin screen_s() {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
 
-@mixin icon($size: 23px) {
-  width: $size;
-  height: $size;
+@mixin icon($w: 23px, $h: 23px, $size: cover) {
+  width: $w;
+  height: $h;
   display: inline-block;
-  background-size: cover;
+  background-size: $size;
   background-repeat: no-repeat;
 }

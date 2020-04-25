@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "_variables";
 @import "_mixins";
 @import "search-form";
@@ -5,6 +6,7 @@
 @import "cards";
 @import "icons";
 @import "footer";
+@import "text";
 
 :root {
   font-size: 14px;
@@ -18,17 +20,24 @@
   padding: 0;
 }
 
-.text {
-  &.text_secondary {
-    color: $text-secondary;
-  }
+ul,
+ol {
+  list-style: none;
 }
+
 .more {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 100px;
+  margin: 40px auto 100px;
 
+  @include screen_l() {
+    margin-bottom: 70px;
+  }
+
+  @include screen_s() {
+    margin: 30px auto 100px;
+  }
   .btn {
     margin-top: 15px;
     @include screen_s() {
@@ -42,7 +51,6 @@
   background-color: transparent;
   color: $text-white;
   font-size: 16px;
-  font-style: bold;
   text-transform: uppercase;
   padding: 15px 25px;
 
@@ -52,15 +60,29 @@
 }
 
 body {
-  font-family: "Proxima Nova";
+  overflow-x: hidden;
 }
 
 .app {
   background-color: $bg-main;
+  overflow: hidden;
 }
 
 .header {
   border-bottom: 1px solid $bg-secondary;
+  @include screen_xl() {
+    padding: 50px 83px;
+  }
+
+  @include screen_l() {
+    padding: 50px 36px;
+  }
+  @include screen_m() {
+    padding: 50px 36px;
+  }
+  @include screen_s() {
+    padding: 20px;
+  }
 }
 
 .dropdown {
@@ -72,26 +94,28 @@ body {
 }
 
 .container {
-  overflow: hidden;
+  // overflow: hidden;
   margin: auto;
   @include screen_xl() {
-    // max-width: 1276px;
-    padding: 50px 83px;
+    max-width: 1276px;
+    // padding: 50px 83px;
   }
 
   @include screen_l {
-    // max-width: 950px;
-    padding: 50px 36px;
+    max-width: 950px;
+    // padding: 50px 36px;
   }
 
   @include screen_m {
-    // max-width: 950px;
-    padding: 50px 36px;
+    max-width: 90vw;
+    // padding: 50px 36px;
   }
 
   @include screen_s {
     // max-width: 335px;
-    padding: 20px;
+    max-width: 90vw;
+
+    // padding: 20px;
   }
 }
 
@@ -107,6 +131,15 @@ body {
 }
 
 .social {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include screen_xl() {
+    align-items: flex-start;
+  }
+
+  width: 100%;
   &__header {
     font-size: 16px;
     font-weight: bold;
@@ -114,7 +147,12 @@ body {
     text-transform: uppercase;
   }
 
+  .social__button:not(:last-of-type) {
+    margin-right: 14px;
+  }
+
   &__buttons {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
   }

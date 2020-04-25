@@ -12,7 +12,7 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   height: $height_big;
-  margin: 70px 36px 10px;
+  margin: 70px 36px 0;
 
   &__collapse-button {
     background-color: transparent;
@@ -41,7 +41,17 @@
   }
 
   @include screen_xl() {
-    margin: 50px 83px;
+    margin: 50px auto 0;
+    max-width: 1276px;
+  }
+
+  @include screen_l() {
+    margin: 50px auto 0;
+    max-width: 950px;
+  }
+
+  @include screen_m() {
+    max-width: 90vw;
   }
 
   @include screen_s {

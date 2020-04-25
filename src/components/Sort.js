@@ -31,6 +31,7 @@ function Sort() {
     setIsCollapsed((isCollapsed) => !isCollapsed);
   };
   return (
+    // <div className="container">
     <form className={`sort-form ${isCollapsed ? "sort-form_collapse" : ""}`}>
       <div className="sort-form__item">
         <Dropdown data={sortData.orderDropdown} />
@@ -50,6 +51,7 @@ function Sort() {
         M
       </button>
     </form>
+    // </div>
   );
 }
 

@@ -3,8 +3,17 @@ import React from "react";
 function Advertise({ img }) {
   return (
     <div className="advertisement">
-      <a href="/#">advertisement on diletant.media</a>
-      <img src={img} alt="adv" />
+      <div className="advertisement__content">
+        <div className="container">
+          <a
+            href="/#"
+            className="advertisement__link text text_16 text_bold text_sans"
+          >
+            реклама на diletant.media
+          </a>
+          <img src={img} alt="adv" />
+        </div>
+      </div>
     </div>
   );
 }
