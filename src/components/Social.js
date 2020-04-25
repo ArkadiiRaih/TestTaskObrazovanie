@@ -7,16 +7,16 @@ function Social() {
         Мы в соцсетях:
       </p>
       <div className="social__buttons">
-        <a className="footer__link social__button" href="/#" alt="twitter">
+        <a className="footer__link social__button" href="/#">
           <i className="icon icon_twitter"></i>
         </a>
-        <a className="footer__link social__button" href="/#" alt="vk">
+        <a className="footer__link social__button" href="/#">
           <i className="icon icon_vk"></i>
         </a>
-        <a className="footer__link social__button" href="/#" alt="fb">
+        <a className="footer__link social__button" href="/#">
           <i className="icon icon_fb"></i>
         </a>
-        <a className="footer__link social__button" href="/#" alt="ok">
+        <a className="footer__link social__button" href="/#">
           <i className="icon icon_ok"></i>
         </a>
       </div>

@@ -10,7 +10,7 @@ function Header() {
             className="search-form__input text text_italic text_serif text_25"
             data-filled={!!searchTerm}
             type="text"
-            placeholder="Seacrh"
+            placeholder="Поиск"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />

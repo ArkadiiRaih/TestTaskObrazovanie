@@ -10,8 +10,24 @@
   &.text_white {
     color: $text-white;
   }
+
+  &.text-dark {
+    color: $text-dark;
+  }
+
+  &.text_upper {
+    text-transform: uppercase;
+  }
+
+  &.text_secondary {
+    color: $text-secondary;
+  }
   &.text_bold {
     font-weight: bold;
+  }
+
+  &.text_center {
+    text-align: center;
   }
 
   &.text_regular {
@@ -28,6 +44,9 @@
 
   &.text_12 {
     font-size: 12px;
+  }
+  &.text_13 {
+    font-size: 13px;
   }
 
   &.text_14 {

@@ -9,7 +9,6 @@
   }
 
   .cards__item {
-    // justify-self: center;
     width: 300px;
   }
 
@@ -83,6 +82,7 @@
 
     .cards__item {
       width: auto;
+      margin: auto;
       min-width: 300px;
       max-width: 335px;
     }
@@ -106,12 +106,16 @@
   flex-direction: column;
   cursor: pointer;
 
-  &:hover {
-    background-color: #0000;
+  .card__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
   }
-
   @include screen_s() {
-    padding-bottom: 10px;
+    padding: 20px;
   }
 
   &__image {
@@ -139,6 +143,9 @@
   .card__tags {
     display: flex;
     flex-direction: row;
+    @include screen_s() {
+      justify-content: center;
+    }
   }
 
   .card__tag {
@@ -164,8 +171,8 @@
 
 .advertisement {
   background-color: $bg-secondary;
-  margin-left: -500px;
-  margin-right: -500px;
+  margin-left: -1000px;
+  margin-right: -1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;

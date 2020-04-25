@@ -134,7 +134,7 @@
     }
   }
   @include screen_s() {
-    .footer__column + .footer__column {
+    .footer__column + .footer__column + .footer__column {
       margin-top: 37px;
     }
   }

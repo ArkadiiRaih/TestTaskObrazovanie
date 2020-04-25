@@ -7,6 +7,7 @@
 @import "icons";
 @import "footer";
 @import "text";
+@import "dropdown";
 
 :root {
   font-size: 14px;
@@ -53,9 +54,15 @@ ol {
   font-size: 16px;
   text-transform: uppercase;
   padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.4s;
 
   &.btn_light {
     border: 1px solid $bg-white;
+    &:hover {
+      color: $link-hover;
+      border-color: $link-hover;
+    }
   }
 }
 
@@ -82,14 +89,6 @@ body {
   }
   @include screen_s() {
     padding: 20px;
-  }
-}
-
-.dropdown {
-  position: relative;
-
-  select {
-    display: none;
   }
 }
 

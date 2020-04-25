@@ -58,6 +58,11 @@
   @include icon(10px, 10px);
 }
 
+.icon_filter {
+  background: url("../icons/filter.svg") center center;
+  @include icon(25px, 20px);
+}
+
 .icon_logo {
   background: url("../icons/logo.svg") center center;
   display: block;
