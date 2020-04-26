@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import Advertise from "./Advertise";
 
-function Cards({ cards = [], adv }) {
+function Cards({ cards = [], adv, getMoreCards }) {
   return (
     <>
       <div className="container cards">
@@ -13,7 +13,9 @@ function Cards({ cards = [], adv }) {
         <p className="text text_secondary text_12 text_bold text_sans text_upper">
           Показано {cards.length} из 2600 карточек
         </p>
-        <button className="btn btn_light">Больше материалов</button>
+        <button className="btn btn_light" onClick={getMoreCards}>
+          Больше материалов
+        </button>
       </div>
     </>
   );

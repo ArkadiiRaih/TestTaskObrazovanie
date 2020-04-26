@@ -1,11 +1,22 @@
 import React, { useState } from "react";
+import { useSpring, animated } from "react-spring";
 
 function Header() {
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 500 },
+  });
   const [searchTerm, setSearchTerm] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="header">
       <div className="container">
-        <form className="search-form">
+        <animated.form style={props} className="search-form">
           <input
             className="search-form__input text text_italic text_serif text_25"
             data-filled={!!searchTerm}
@@ -21,7 +32,7 @@ function Header() {
           >
             <i className="icon icon_close"></i>
           </button>
-        </form>
+        </animated.form>
       </div>
     </div>
   );

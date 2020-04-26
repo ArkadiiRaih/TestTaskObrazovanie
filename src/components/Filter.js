@@ -1,15 +1,17 @@
 import React, { useState, useCallback } from "react";
+import { useSpring, animated } from "react-spring";
+
 import Dropdown from "./Dropdown";
-import {
-  CHANGE_ORDER,
-  CHANGE_TYPE,
-  CHANGE_PLACE,
-  CHANGE_TIME,
-} from "./Content";
+import { CHANGE_ORDER, CHANGE_TYPE, CHANGE_PLACE, CHANGE_TIME } from "../App";
 import { sortData } from "../devData";
 
-function Sort({ dispatchFilter: dispatch }) {
+function Sort({ dispatch }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 },
+  });
 
   const changeOrder = useCallback(
     (order) => {
@@ -39,8 +41,12 @@ function Sort({ dispatchFilter: dispatch }) {
   const toggle = () => {
     setIsCollapsed((isCollapsed) => !isCollapsed);
   };
+
   return (
-    <div className={`sort-form ${isCollapsed ? "sort-form_collapse" : ""}`}>
+    <animated.div
+      style={props}
+      className={`sort-form ${isCollapsed ? "sort-form_collapse" : ""}`}
+    >
       <div className="sort-form__item">
         <Dropdown data={sortData.orderDropdown} changeFilter={changeOrder} />
       </div>
@@ -58,8 +64,7 @@ function Sort({ dispatchFilter: dispatch }) {
       >
         <i className="icon icon_filter"></i>
       </button>
-    </div>
-    // </div>
+    </animated.div>
   );
 }
 

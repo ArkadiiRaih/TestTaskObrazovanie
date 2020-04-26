@@ -2,9 +2,18 @@
   position: relative;
   display: inline-block;
   user-select: none;
+  display: flex;
+  align-items: center;
 
   &:not(:first-child) {
     margin-left: 10px;
+  }
+
+  @include screen_s() {
+    &:not(:first-child) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 }
 .select {
@@ -38,6 +47,7 @@
 
   @include screen_s() {
     border-radius: 20px;
+    padding: 6px 30px;
   }
 }
 
@@ -99,5 +109,11 @@
     visibility: visible;
     pointer-events: all;
     // /* transform: translateY(0);
+  }
+}
+
+.select-label {
+  @include screen_s() {
+    display: none;
   }
 }

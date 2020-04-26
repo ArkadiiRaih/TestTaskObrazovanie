@@ -1,12 +1,23 @@
 import React from "react";
 
+import { useSpring, animated } from "react-spring";
+
 function Card({ data }) {
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 500 },
+  });
+
   const { tags, title, img, isMain, id } = data;
   return (
-    <div
+    <animated.div
       className={`${isMain ? "cards__item_main" : "cards__item"} card`}
-      style={{ backgroundImage: `url(${img})` }}
     >
+      <div
+        className="card__bg"
+        style={{ ...props, backgroundImage: `url(${img})` }}
+      ></div>
       <ul className="card__tags text text_10 text_sans text_bold">
         {tags &&
           Object.values(tags).map((tag) => (
@@ -22,7 +33,7 @@ function Card({ data }) {
       >
         {title}
       </p>
-    </div>
+    </animated.div>
   );
 }
 
