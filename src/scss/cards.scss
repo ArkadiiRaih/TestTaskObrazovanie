@@ -110,7 +110,6 @@
   border-radius: 10px;
   background-color: transparent;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 10px 20px 60px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -128,9 +127,6 @@
     right: 0;
     z-index: 1;
   }
-  @include screen_s() {
-    padding: 20px;
-  }
 
   .card__title {
     z-index: 1;
@@ -141,23 +137,59 @@
     &:before {
       display: block;
     }
+
+    @include screen_s() {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .card__description {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #1b2026;
+    &:before {
+      content: url("../icons/separator_mobile.svg");
+      display: block;
+    }
+
+    @include screen_s {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      max-height: 50%;
+    }
   }
 
   .card__bg {
-    position: absolute;
+    display: flex;
+    padding: 10px 20px 32px;
     width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    height: 100%;
     // z-index: 1;
     background-size: cover;
+    @include screen_s() {
+      padding: 20px;
+      padding-bottom: 0;
+      // background: linear-gradient(
+      //     180deg,
+      //     rgba(39, 43, 47, 0.1) 18.34%,
+      //     #1b2026 98.36%
+      //   ),
+      //   url("./images/1.png") center center;
+      background-size: cover;
+    }
   }
 
   .card__tags {
-    z-index: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
     @include screen_s() {
       justify-content: center;
     }

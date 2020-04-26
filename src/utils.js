@@ -14,19 +14,19 @@ export function filterCards(cards, filter) {
 
 function sortByRating(card1, card2) {
   if (card1.rating > card2.rating) {
-    return 1;
+    return -1;
   }
   if (card1.rating < card2.rating) {
-    return -1;
+    return 1;
   }
   return 0;
 }
 
 function sortByDate(card1, card2) {
-  if (card1.date > card2.date) {
+  if (card1.timestamp > card2.timestamp) {
     return 1;
   }
-  if (card1.date < card2.date) {
+  if (card1.timestamp < card2.timestamp) {
     return -1;
   }
   return 0;

@@ -2,13 +2,17 @@ import React from "react";
 import Card from "./Card";
 import Advertise from "./Advertise";
 
-function Cards({ cards = [], adv, getMoreCards }) {
+function Cards({ cards = [], adv, getMoreCards, Loader }) {
+  if (!cards) return <Loader />;
   return (
     <>
       <div className="container cards">
-        {cards && cards.map((card) => <Card key={card.id} data={card} />)}
+        {cards.map((card) => (
+          <Card key={card.id} data={card} />
+        ))}
         <Advertise img={adv} />
       </div>
+      <Loader />
       <div className="more">
         <p className="text text_secondary text_12 text_bold text_sans text_upper">
           Показано {cards.length} из 2600 карточек

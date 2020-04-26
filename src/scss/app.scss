@@ -73,6 +73,7 @@ body {
 .app {
   background-color: $bg-main;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .header {

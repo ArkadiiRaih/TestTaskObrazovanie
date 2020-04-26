@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState, useReducer, useEffect, useCallback } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./scss/app.scss";
@@ -18,7 +18,7 @@ const defaultFilter = {
   order: "Новое",
   type: "",
   place: "",
-  time: "",
+  time: ""
 };
 
 const reducer = (state, action) => {
@@ -41,38 +41,60 @@ const reducer = (state, action) => {
 function App() {
   const [cards, setCards] = useState(null);
   const [filter, dispatch] = useReducer(reducer, defaultFilter);
+  const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setCards(cardsData), 1000);
+    setTimeout(() => {
+      setIsloading(false);
+      setCards(cardsData);
+    }, 1000);
   }, []);
 
   const getMoreCards = () => {
-    console.log(123);
-    setTimeout(
-      () => setCards(filterCards([...cardsData, ...cardsData], filter)),
-      700
-    );
+    setIsloading(true);
+    setTimeout(() => {
+      setIsloading(false);
+      setCards(filterCards([...cards, ...cardsData], filter));
+    }, 700);
   };
 
   useEffect(() => {
     setCards(null);
-    setTimeout(() => setCards(filterCards(cardsData, filter)), 700);
+    setIsloading(true);
+    setTimeout(() => {
+      setIsloading(false);
+      setCards(filterCards(cardsData, filter));
+    }, 700);
   }, [filter, setCards]);
+
+  const Loader = useCallback(
+    () => (
+      <>
+        {isLoading && (
+          <h1
+            className="text text_white text_bold text_upper text_30 text_sans"
+            style={{ textAlign: "center", margin: "50px auto" }}
+          >
+            Loading...
+          </h1>
+        )}
+      </>
+    ),
+    [isLoading]
+  );
+
   return (
     <div className="app">
       <Header />
       {/* <Content /> */}
       <Sort dispatch={dispatch} />
-      {cards ? (
-        <Cards cards={cards} adv={adv} getMoreCards={getMoreCards} />
-      ) : (
-        <h1
-          className="text text_white text_bold text_upper text_30 text_sans"
-          style={{ textAlign: "center", margin: "50px auto" }}
-        >
-          Loading...
-        </h1>
-      )}
+      <Cards
+        cards={cards}
+        adv={adv}
+        getMoreCards={getMoreCards}
+        Loader={Loader}
+      />
+
       <Footer />
     </div>
   );

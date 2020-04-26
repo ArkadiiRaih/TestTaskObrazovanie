@@ -1,8 +1,15 @@
 import React from "react";
+import { useSpring, animated } from "react-spring";
 
 function Advertise({ img }) {
+  const animationStyle = useSpring({
+    opacity: 1,
+    maxHeight: 1000,
+    from: { opacity: 0 },
+    config: { duration: 500 }
+  });
   return (
-    <div className="advertisement">
+    <animated.div style={animationStyle} className="advertisement">
       <div className="advertisement__content">
         <div className="container">
           <a
@@ -14,7 +21,7 @@ function Advertise({ img }) {
           <img src={img} alt="adv" />
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

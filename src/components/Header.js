@@ -5,7 +5,7 @@ function Header() {
   const props = useSpring({
     opacity: 1,
     from: { opacity: 0 },
-    config: { duration: 500 },
+    config: { duration: 500 }
   });
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -18,7 +18,7 @@ function Header() {
       <div className="container">
         <animated.form style={props} className="search-form">
           <input
-            className="search-form__input text text_italic text_serif text_25"
+            className="search-form__input text text_italic text_serif"
             data-filled={!!searchTerm}
             type="text"
             placeholder="Поиск"
