@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c600ece.chunk.css",
-    "main.js": "/static/js/main.a0a7edb9.chunk.js",
-    "main.js.map": "/static/js/main.a0a7edb9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c7d1c33e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c7d1c33e.js.map",
-    "static/js/2.b8a10711.chunk.js": "/static/js/2.b8a10711.chunk.js",
-    "static/js/2.b8a10711.chunk.js.map": "/static/js/2.b8a10711.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ab81b740ed2d59c17acc7c7b2902be24.js": "/precache-manifest.ab81b740ed2d59c17acc7c7b2902be24.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.4c600ece.chunk.css.map": "/static/css/main.4c600ece.chunk.css.map",
-    "static/js/2.b8a10711.chunk.js.LICENSE.txt": "/static/js/2.b8a10711.chunk.js.LICENSE.txt",
-    "static/media/app.scss": "/static/media/vk_hovered.5269ee80.svg"
+    "main.css": "/TestTaskObrazovanie/static/css/main.d05e0fd5.chunk.css",
+    "main.js": "/TestTaskObrazovanie/static/js/main.72946a08.chunk.js",
+    "main.js.map": "/TestTaskObrazovanie/static/js/main.72946a08.chunk.js.map",
+    "runtime-main.js": "/TestTaskObrazovanie/static/js/runtime-main.e493af54.js",
+    "runtime-main.js.map": "/TestTaskObrazovanie/static/js/runtime-main.e493af54.js.map",
+    "static/js/2.b8a10711.chunk.js": "/TestTaskObrazovanie/static/js/2.b8a10711.chunk.js",
+    "static/js/2.b8a10711.chunk.js.map": "/TestTaskObrazovanie/static/js/2.b8a10711.chunk.js.map",
+    "index.html": "/TestTaskObrazovanie/index.html",
+    "precache-manifest.8a2f26c6df49e8b09548f4e3676620b8.js": "/TestTaskObrazovanie/precache-manifest.8a2f26c6df49e8b09548f4e3676620b8.js",
+    "service-worker.js": "/TestTaskObrazovanie/service-worker.js",
+    "static/css/main.d05e0fd5.chunk.css.map": "/TestTaskObrazovanie/static/css/main.d05e0fd5.chunk.css.map",
+    "static/js/2.b8a10711.chunk.js.LICENSE.txt": "/TestTaskObrazovanie/static/js/2.b8a10711.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/TestTaskObrazovanie/static/media/vk_hovered.5269ee80.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7d1c33e.js",
+    "static/js/runtime-main.e493af54.js",
     "static/js/2.b8a10711.chunk.js",
-    "static/css/main.4c600ece.chunk.css",
-    "static/js/main.a0a7edb9.chunk.js"
+    "static/css/main.d05e0fd5.chunk.css",
+    "static/js/main.72946a08.chunk.js"
   ]
 }
