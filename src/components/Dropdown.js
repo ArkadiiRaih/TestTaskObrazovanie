@@ -25,12 +25,12 @@ function Dropdown({ data, changeFilter }) {
       onClick={toggle}
     >
       {label ? (
-        <p className="select-label text text_bold text_sans text_16">
+        <p className="select-label text text_style-bold text_sans text_m">
           {label}:&nbsp;
         </p>
       ) : null}
       <div className={`select ${isOpen ? "select_opened" : ""}`}>
-        <button className="select__trigger text text_13 text_primary text_bold text_sans text_center">
+        <button className="select__trigger text text_s text_primary text_style-bold text_sans text_center">
           {currentOption}
           <i className="select__open-icon">
             <svg
@@ -51,7 +51,7 @@ function Dropdown({ data, changeFilter }) {
           <span
             key={defaultState}
             data-option=""
-            className="select__option text text_13 text_secondary text_bold text_sans text_center"
+            className="select__option text text_s text_secondary text_style-bold text_sans text_center"
           >
             {defaultState}
           </span>
@@ -61,7 +61,7 @@ function Dropdown({ data, changeFilter }) {
               data-option={option}
               className={`select__option text text_13 ${
                 option == currentOption ? "text_white" : "text_secondary"
-              } text_bold text_sans text_center`}
+              } text_style-bold text_sans text_center`}
             >
               {option}
             </span>
@@ -70,30 +70,6 @@ function Dropdown({ data, changeFilter }) {
       </div>
     </div>
   );
-  // return (
-  //   <>
-  //     {label ? (
-  //       <p className="text text_bold text_sans text_16">{label}:&nbsp;</p>
-  //     ) : null}
-  //     <div className={`dropdown ${open ? "dropdown_open" : ""}`}>
-  //       <div className="dropdown__input">
-  //         <p className="text text_13 text_primary text_bold text_sans text_center">
-  //           {defaultState}
-  //         </p>
-  //         <button className="dropdown__toggler" onClick={toggle}>
-  //           <i className="icon icon_open">+</i>
-  //         </button>
-  //         <ul className="dropdown__options">
-  //           {options.map((option) => (
-  //             <li className="dropdow__option" key={option}>
-  //               {option}
-  //             </li>
-  //           ))}
-  //         </ul>
-  //       </div>
-  //     </div>
-  //   </>
-  // );
 }
 
 export default Dropdown;

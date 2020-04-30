@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import { useSpring, animated } from "react-spring";
+import Tag from "./Tag";
 
 function Card({ data }) {
   const { tags, title, img, isMain, id, description } = data;
@@ -23,7 +24,6 @@ function Card({ data }) {
       backgroundSize: "cover"
     };
   };
-  console.log(bgStyle());
 
   return (
     <animated.div
@@ -32,14 +32,14 @@ function Card({ data }) {
     >
       <div className="card__bg" style={bgStyle()}>
         <p
-          className={`card__title text text_serif text_bold text_white ${
-            isMain ? "text_30" : "text_20"
+          className={`card__title text text_serif text_style-bold text_white ${
+            isMain ? "text_xxl" : "text_l"
           }`}
         >
           {title}
         </p>
       </div>
-      <ul className="card__tags text text_10 text_sans text_bold">
+      <ul className="card__tags text text_xxs text_sans text_style-bold">
         {tags &&
           Object.values(tags).map((tag) => (
             <li key={`${id}-${tag}`} className="card__tag">
@@ -47,7 +47,7 @@ function Card({ data }) {
             </li>
           ))}
       </ul>
-      <p className="card__description  text text_16 text_serif text_white">
+      <p className="card__description  text text_m text_serif text_white">
         {description}
       </p>
     </animated.div>

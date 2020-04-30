@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
+import { CHANGE_SEARCH_TERM } from "../App";
 
-function Header() {
+function Header({ dispatch }) {
   const props = useSpring({
     opacity: 1,
     from: { opacity: 0 },
@@ -9,16 +10,24 @@ function Header() {
   });
   const [searchTerm, setSearchTerm] = useState("");
 
+  const changeSearchTerm = () =>
+    dispatch({ type: CHANGE_SEARCH_TERM, payload: searchTerm });
+
   const onSubmit = (e) => {
     e.preventDefault();
+    changeSearchTerm();
   };
 
   return (
     <div className="header">
       <div className="container">
-        <animated.form style={props} className="search-form">
+        <animated.form
+          style={props}
+          className="search-form"
+          onSubmit={onSubmit}
+        >
           <input
-            className="search-form__input text text_italic text_serif"
+            className="search-form__input text text_style-italic text_serif textstyle-_bold"
             data-filled={!!searchTerm}
             type="text"
             placeholder="Поиск"

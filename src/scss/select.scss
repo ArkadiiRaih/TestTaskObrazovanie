@@ -1,7 +1,6 @@
 .select-wrapper {
   position: relative;
   display: inline-block;
-  user-select: none;
   display: flex;
   align-items: center;
 
@@ -108,7 +107,6 @@
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-    // /* transform: translateY(0);
   }
 }
 

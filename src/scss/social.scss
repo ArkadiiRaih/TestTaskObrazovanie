@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .social__header {
+    font-weight: bold;
+    color: $text-white;
+    text-transform: uppercase;
+  }
+
+  .social__button:not(:last-of-type) {
+    margin-right: 14px;
+  }
+
+  .social__buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include screen_xl() {
+    align-items: flex-start;
+  }
+}

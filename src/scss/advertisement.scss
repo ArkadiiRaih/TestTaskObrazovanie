@@ -1,0 +1,33 @@
+.advertisement {
+  background-color: $bg-secondary;
+  margin-left: -1000px;
+  margin-right: -1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 300px;
+  max-height: 300px;
+
+  .advertisement__content {
+    width: 100vw;
+    margin: auto;
+    padding: 26px 40px;
+    box-shadow: inset 0px 10px 12px #dadada, inset 0px -10px 12px #dadada;
+  }
+
+  .advertisement__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .advertisement__link {
+    color: $text-dark;
+    text-decoration: none;
+    transition: all 0.4s;
+    margin-bottom: 12px;
+    display: block;
+    &:hover {
+      color: $accent;
+    }
+  }
+}

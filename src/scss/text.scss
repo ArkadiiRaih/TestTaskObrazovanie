@@ -22,50 +22,54 @@
   &.text_secondary {
     color: $text-secondary;
   }
-  &.text_bold {
+  &.text_style-bold {
     font-weight: bold;
+  }
+
+  &.text_style-regular {
+    font-weight: 400;
+  }
+
+  &.text_style-italic {
+    font-style: italic;
   }
 
   &.text_center {
     text-align: center;
   }
 
-  &.text_regular {
-    font-weight: 400;
-  }
-
-  &.text_italic {
-    font-style: italic;
-  }
-
-  &.text_10 {
+  //xxs
+  &.text_xxs {
     font-size: 10px;
   }
 
-  &.text_12 {
+  //xs
+  &.text_xs {
     font-size: 12px;
   }
-  &.text_13 {
-    font-size: 13px;
-  }
 
-  &.text_14 {
+  //s
+  &.text_s {
     font-size: 14px;
   }
 
-  &.text_16 {
+  //m
+  &.text_m {
     font-size: 16px;
   }
 
-  &.text_20 {
+  //l
+  &.text_l {
     font-size: 20px;
   }
 
-  &.text_25 {
+  //xl
+  &.text_xl {
     font-size: 25px;
   }
 
-  &.text_30 {
+  // xxl
+  &.text_xxl {
     font-size: 30px;
   }
 }

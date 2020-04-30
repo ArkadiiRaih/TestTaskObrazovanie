@@ -14,36 +14,34 @@ function Footer() {
         </div>
         <div className="footer__section">
           <div className="footer__column">
-            <h6 className="footer__title footer__title_uppercase text text_16 text_bold text_sans">
+            <h6 className="footer__title footer__title_uppercase text text_m text_style-bold text_sans">
               рубрикатор
             </h6>
-            <ul className="list text text_14 text_regular text_sans">
-              <li className="list__item list__item_iconed">
-                <i className="icon icon_book"></i>
-                <span>
-                  <a className="footer__link" href="/#" target="_blank">
-                    cборники
-                  </a>
-                </span>
+            <ul className="text text_s text_style-regular text_sans">
+              <li>
+                <a className="footer__link" href="/#" target="_blank">
+                  <i className="icon icon_s icon_book"></i>
+                  <span>cборники</span>
+                </a>
               </li>
-              <li className="list__item list__item_iconed">
-                <i className="icon icon_page"></i>
+              <li>
+                <i className="icon icon_s icon_page"></i>
                 <span>
                   <a className="footer__link" href="/#" target="_blank">
                     статьи
                   </a>
                 </span>
               </li>
-              <li className="list__item list__item_iconed">
-                <i className="icon icon_crown"></i>
+              <li>
+                <i className="icon icon_s icon_crown"></i>
                 <span>
                   <a className="footer__link" href="/#" target="_blank">
                     тесты
                   </a>
                 </span>
               </li>
-              <li className="list__item list__item_iconed">
-                <i className="icon icon_journal"></i>
+              <li>
+                <i className="icon icon_s icon_journal"></i>
                 <span>
                   <a className="footer__link" href="/#" target="_blank">
                     журнал
@@ -53,12 +51,13 @@ function Footer() {
             </ul>
           </div>
           <div className="footer__column">
-            <h6 className="footer__title footer__title_uppercase text text_16 text_bold text_sans">
+            <h6 className="footer__title footer__title_uppercase text text_m text_style-bold text_sans">
               Контакты
             </h6>
-            <ul className="list text text_14 text_regular text_sans">
-              <li className="list__item">
+            <ul className="text text_s text_style-regular text_sans">
+              <li>
                 <span>по вопросам подписки</span>
+                <br />
                 <a
                   className="footer__mail"
                   href="mailto:podpiska@diletant.media"
@@ -66,8 +65,9 @@ function Footer() {
                   podpiska@diletant.media
                 </a>
               </li>
-              <li className="list__item">
+              <li>
                 <span>по общим вопросам</span>
+                <br />
                 <a className="footer__mail" href="mailto:info@diletnant.media">
                   info@diletnant.media
                 </a>
@@ -75,21 +75,21 @@ function Footer() {
             </ul>
           </div>
           <div className="footer__column">
-            <h6 className="footer__title footer__title_uppercase text text_16 text_bold text_sans">
+            <h6 className="footer__title footer__title_uppercase text text_m text_style-bold text_sans">
               Инфо
             </h6>
-            <ul className="list text text_14 text_regular text_sans">
-              <li className="list__item">
+            <ul className="text text_s text_style-regular text_sans">
+              <li>
                 <a className="footer__link" href="/#" target="_blank">
                   правила комментирования
                 </a>
               </li>
-              <li className="list__item">
+              <li>
                 <a className="footer__link" href="/#" target="_blank">
                   cookie policy / GDPR
                 </a>
               </li>
-              <li className="list__item">
+              <li>
                 <a className="footer__link" href="/#" target="_blank">
                   реклама на сайте
                 </a>
@@ -100,7 +100,7 @@ function Footer() {
       </div>
       <div className="footer__notice">
         <div className="footer__section footer__section_optional">
-          <h6 className="footer__title text text_16 text_bold text_sans">
+          <h6 className="footer__title text text_m text_style-bold text_sans">
             Нашли ошибку или опечатку ?<br /> Выделите ее и нажмите Ctrl+Enter
           </h6>
         </div>
@@ -109,7 +109,7 @@ function Footer() {
         <div className="container">
           <div className="footer__section">
             <div className="footer__credits">
-              <p className="text text_12 text_regular text_sans">
+              <p className="text text_xs text_style-regular text_sans">
                 Свидетельство о&nbsp;регистрации СМИ Эл №ФС77-62623 выдано
                 федеральной службой по&nbsp;надзору в&nbsp;сфере связи,
                 информационных технологий и&nbsp;массовых коммуникаций
@@ -118,7 +118,7 @@ function Footer() {
                 изданий обязательна гиперссылка на&nbsp;сайт «Дилетант»&nbsp;—
                 diletant.media.
               </p>
-              <p className="text text_12 text_regular text_sans">
+              <p className="text text_xs text_style-regular text_sans">
                 Главный редактор: Алексей Соломин
               </p>
             </div>

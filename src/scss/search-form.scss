@@ -7,30 +7,31 @@
   align-items: center;
   height: $size_big;
 
-  &__input {
+  .search-form__input {
     height: 100%;
     flex-grow: 2;
     border-radius: 24px;
     padding: 0 19px;
-    font-size: 25px;
+    font-size: $text_xl;
     background-color: $bg-secondary;
     color: $text-dark;
     text-align: center;
     border: none;
     &:focus {
-      // border: 2px solid $link_hover;
-      box-shadow: 0px 0px 0px 4px $link_hover;
+      // border: 2px solid $accent;
+      box-shadow: 0px 0px 0px 4px $accent;
     }
   }
 
   .search-form__input[data-filled="false"] + .search-form__button {
     transform: scale(0);
     max-width: 0;
+    margin-left: 0;
   }
 
-  &__button {
-    max-width: 100px;
+  .search-form__button {
     margin-left: 15px;
+    max-width: 100px;
     width: $size_big;
     height: 100%;
     border-radius: 50%;
@@ -39,13 +40,13 @@
     cursor: pointer;
     transition: all 0.4s;
     &:hover {
-      background-color: $link_hover;
+      background-color: $accent;
       .icon {
         background-image: url("../icons/close\ icon_hover.svg");
       }
     }
     &:focus {
-      background-color: $link_hover;
+      background-color: $accent;
       .icon {
         background-image: url("../icons/close\ icon_hover.svg");
       }
@@ -57,15 +58,12 @@
 
     &__input {
       text-align: left;
-      font-size: 16px;
+      font-size: $text_m;
     }
 
     &__button {
       height: $size_small;
       width: $size_small;
-    }
-    &__input {
-      font-size: 16px;
     }
   }
 }

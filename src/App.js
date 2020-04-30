@@ -72,7 +72,7 @@ function App() {
       <>
         {isLoading && (
           <h1
-            className="text text_white text_bold text_upper text_30 text_sans"
+            className="text text_white text_bold text_upper text_xxl text_sans"
             style={{ textAlign: "center", margin: "50px auto" }}
           >
             Loading...
@@ -85,7 +85,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header dispatch={dispatch} />
       {/* <Content /> */}
       <Sort dispatch={dispatch} />
       <Cards
