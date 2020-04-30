@@ -1,0 +1,8 @@
+{
+  "short_name": "ReactSearch",
+  "name": "Test task obrazovanie",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
